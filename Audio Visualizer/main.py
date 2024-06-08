@@ -2,7 +2,7 @@ import pyaudio
 import wave
 
 
-class recorder(pyaudio.PyAudio):
+class Recorder(pyaudio.PyAudio):
     def __init__(self):
         super().__init__()
 
@@ -33,7 +33,7 @@ class recorder(pyaudio.PyAudio):
 
 
 def main() -> None:
-    listener = recorder()
+    listener = Recorder()
 
     listener.record(10, "new.wav")
 
